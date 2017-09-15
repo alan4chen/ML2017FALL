@@ -21,4 +21,8 @@ with open(sys.argv[1], "r") as f:
 for i in range(index):
     word = index_to_word[i]
     count = word_to_count[word]
-    print(str(word) + " " + str(i) + " " + str(count))
+    if i < index - 1:
+        print(str(word) + " " + str(i) + " " + str(count), end='')
+    else:
+        print(str(word) + " " + str(i) + " " + str(count))
+
