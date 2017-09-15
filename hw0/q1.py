@@ -22,7 +22,7 @@ for i in range(index):
     word = index_to_word[i]
     count = word_to_count[word]
     if i < index - 1:
-        print(str(word) + " " + str(i) + " " + str(count), end='')
-    else:
         print(str(word) + " " + str(i) + " " + str(count))
+    else:
+        print(str(word) + " " + str(i) + " " + str(count), end='')
 
