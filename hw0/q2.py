@@ -10,6 +10,4 @@ for i in range(width):
 		r, g, b = im.getpixel((i,j))
 		rgb_im.putpixel((i, j), (int(r/2), int(g/2), int(b/2)))
 
-fw = open("Q2.jpg", "w")
-rgb_im.save(fw, "JPEG")
-fw.close()
+rgb_im.save("Q2.png", "PNG")
