@@ -1,1 +1,1 @@
-python q1.py $1 > Q1.txt
+python3 q1.py $1 > Q1.txt
