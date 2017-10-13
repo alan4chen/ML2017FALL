@@ -3,7 +3,7 @@ import _pickle as cPickle
 import random
 import sys
 
-from LinearRegression import Model
+from train import Model
 from csv_train_converter import Item2ID
 import csv_test_converter
 
