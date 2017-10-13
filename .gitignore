@@ -1,3 +1,6 @@
 .idea
 .DS_Store
 test
+hw1/workspace
+scratch
+hw1/__pycache__
