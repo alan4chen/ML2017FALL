@@ -1,0 +1,1 @@
+python logistic_simple.py $3 $4 $5 $6
