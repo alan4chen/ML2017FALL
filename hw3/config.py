@@ -1,0 +1,4 @@
+VERSION_NAME = 'cnn111312_434_0.678161'
+MODEL_SAVE_DIR = './model'
+HISTORY_SAVE_DIR = './history'
+ANS_DIR = './ans'

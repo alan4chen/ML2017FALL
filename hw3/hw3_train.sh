@@ -1,0 +1,1 @@
+python trainer_cnn.py $1
