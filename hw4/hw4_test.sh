@@ -1,0 +1,1 @@
+python predictor_w2v.py $1 $2
