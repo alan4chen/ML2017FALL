@@ -68,7 +68,7 @@ class Model:
         train_generator = DataGenerator(self.BATCH).generate(X_train, y_train)
         # val_generator = DataGenerator(self.BATCH).generate(X_val, y_val)
 
-        filepath = os.path.join('./model', config.VERSION_NAME+"_{epoch:02d}_{val_acc:.6f}.h5")
+        filepath = config.VERSION_NAME+"_{epoch:02d}_{val_acc:.6f}.h5"
         model_checkpoint = ModelCheckpoint(filepath, verbose=1, period=1, save_best_only=True, monitor='val_acc')
 
         self.history = self.model.fit_generator(train_generator, steps_per_epoch=self.STEPS_PER_EPOCH,
