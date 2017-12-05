@@ -55,7 +55,7 @@ def readTrainingLabelTXTstemed(training_data_path = './data/training_label.txt')
                 sentence_stemmed += duplicateRemover(st.stem(word))
                 sentence_stemmed += " "
             training_text_stemmed.append(sentence_stemmed[:-1])
-        cPickle.dump((training_label, training_text_stemmed), open('./data/training_label.pickle', 'wb'))
+        # cPickle.dump((training_label, training_text_stemmed), open('./data/training_label.pickle', 'wb'))
         return training_label, training_text_stemmed
     # obj = cPickle.load(open('./data/training_label.pickle', 'rb'))
     # print("Loaded: TrainingLabelTXT")
@@ -78,7 +78,7 @@ def readTrainingNoLabelTXTstemed(training_nolabel_path = './data/training_nolabe
                 sentence_stemmed += duplicateRemover(st.stem(word))
                 sentence_stemmed += " "
             training_nolabel_stemmed.append(sentence_stemmed[:-1])
-        cPickle.dump(training_nolabel_stemmed, open('./data/training_nolabel.pickle', 'wb'))
+        # cPickle.dump(training_nolabel_stemmed, open('./data/training_nolabel.pickle', 'wb'))
         return training_nolabel_stemmed
     # print("Loaded: TrainingNoLabelTXT")
     # return cPickle.load(open('./data/training_nolabel.pickle', 'rb'))
@@ -97,7 +97,7 @@ def readQ3(path):
             sentence_stemmed += duplicateRemover(st.stem(word))
             sentence_stemmed += " "
         training_nolabel_stemmed.append(sentence_stemmed[:-1])
-    cPickle.dump(training_nolabel_stemmed, open('./data/training_nolabel.pickle', 'wb'))
+    # cPickle.dump(training_nolabel_stemmed, open('./data/training_nolabel.pickle', 'wb'))
     return training_nolabel_stemmed
 
 
@@ -116,7 +116,7 @@ def readTestingTXTstemed(testing_path = './data/testing_data.txt'):
                 sentence_stemmed += duplicateRemover(st.stem(word))
                 sentence_stemmed += " "
             testing_text_stemmed.append(sentence_stemmed[:-1])
-        cPickle.dump(testing_text_stemmed, open('./data/testing_data.pickle', 'wb'))
+        # cPickle.dump(testing_text_stemmed, open('./data/testing_data.pickle', 'wb'))
         return testing_text_stemmed
     # print("Loaded: TestingTxt")
     # return cPickle.load(open('./data/testing_data.pickle', 'rb'))
