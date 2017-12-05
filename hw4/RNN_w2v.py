@@ -105,11 +105,11 @@ class Model:
         self.tokenizer = cPickle.load(open("./metadata/" + token_name + ".pickle", 'rb'))
 
     def saveModel(self, model_name=config.VERSION_NAME):
-        self.model.save(os.path.join(model_name + '.h5'))
+        self.model.save(model_name + '.h5')
 
     def loadModel(self, model_name=config.VERSION_NAME):
         from keras.models import load_model
-        self.model = load_model(os.path.join(model_name + '.h5'))
+        self.model = load_model(model_name + '.h5')
 
     def split_validation(self, X_all, Y_all, percentage):
         from math import log, floor
