@@ -41,7 +41,7 @@ def readTestingTXT(testing_path = './data/testing_data.txt'):
 
 def readTrainingLabelTXTstemed(training_data_path = './data/training_label.txt'):
     # if not os.path.isfile('./data/training_label.pickle'):
-        training_label, training_text = readTrainingLabelTXT()
+        training_label, training_text = readTrainingLabelTXT(training_data_path)
         training_text_stemmed = []
         for sentence in training_text:
             sentence_stemmed = ""
@@ -65,7 +65,7 @@ def readTrainingLabelTXTstemed(training_data_path = './data/training_label.txt')
 
 def readTrainingNoLabelTXTstemed(training_nolabel_path = './data/training_nolabel.txt'):
     # if not os.path.isfile('./data/training_nolabel.pickle'):
-        training_nolabel_text = readTrainingNoLabelTXT()
+        training_nolabel_text = readTrainingNoLabelTXT(training_nolabel_path)
         training_nolabel_stemmed = []
         for sentence in training_nolabel_text:
             sentence = sentence.translate({ord(i): None for i in CHAR_TO_REMOVE})
@@ -103,7 +103,7 @@ def readQ3(path):
 
 def readTestingTXTstemed(testing_path = './data/testing_data.txt'):
     # if not os.path.isfile('./data/testing_data.pickle'):
-        testing_text = readTestingTXT()
+        testing_text = readTestingTXT(testing_path)
         testing_text_stemmed = []
         for sentence in testing_text:
             sentence = sentence.translate({ord(i): None for i in CHAR_TO_REMOVE})
