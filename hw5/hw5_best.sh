@@ -1,0 +1,1 @@
+python3.6 Q6.py --test --test_csv_path=$1 --prediction_file_path=$2 --movies_csv_path=$3 --users_csv_path=$4
