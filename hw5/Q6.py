@@ -161,7 +161,7 @@ if __name__ == "__main__":
         # Normalize
         mu = np.mean(train_rating)
         sigma = np.std(train_rating)
-        cPickle.dump((mu, sigma), open("Q1.para", 'wb'))
+        cPickle.dump((mu, sigma), open("Q6.para", 'wb'))
         train_rating = (train_rating - mu) / sigma
 
         model = Model(ldim, sigma, max(userID_np)+1, max(movieID_np)+1)
@@ -178,7 +178,7 @@ if __name__ == "__main__":
 
 
         # Load normalized paras
-        mu, sigma = cPickle.load(open("Q1.para", 'rb'))
+        mu, sigma = cPickle.load(open("Q6.para", 'rb'))
 
         userID_np, gender_np, age_np, occu_np = csv_reader.readUsers(path=args.users_csv_path)
         movieID_np = csv_reader.readMovies(path=args.movies_csv_path)
