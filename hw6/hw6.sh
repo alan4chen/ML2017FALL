@@ -1,0 +1,1 @@
+python3.6 p3_autoencode.py --test --image_path=$1 --test_case_path=$2 --prediction_file_path=$3
